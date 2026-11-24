@@ -46,7 +46,7 @@ export interface SomtumStats {
     mode: number;
 }
 
-export class SomtumMap {
+export declare class SomtumMap {
     static parse(content: string | Uint8Array): SomtumMap | null;
     readonly mode: number;
     readonly nObjects: number;
@@ -56,8 +56,8 @@ export class SomtumMap {
     free(): void;
 }
 
-export const CALCULATORS: readonly ['official', 'relax', 'akatsuki'];
-export function route(mode: number, mods: number): 0 | 1 | 2;
-export const version: string;
-export const RELAX: 128;
-export const AUTOPILOT: 8192;
+export declare const CALCULATORS: readonly ['official', 'relax', 'akatsuki'];
+export declare function route(mode: number, mods: number): 0 | 1 | 2;
+export declare const version: string;
+export declare const RELAX: 128;
+export declare const AUTOPILOT: 8192;
