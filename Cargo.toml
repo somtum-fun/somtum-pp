@@ -1,0 +1,33 @@
+[package]
+name = "somtum-pp"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "osu!somtum pp: the same star rating and pp the somtum server pays, for vanilla, Relax and Autopilot, behind one C ABI (native static/dynamic library and WebAssembly)."
+repository = "https://github.com/somtum-fun/somtum-pp"
+
+[lib]
+crate-type = ["rlib", "staticlib", "cdylib"]
+
+[dependencies]
+# Vanilla: ppy's current pp (rosu-pp `pp-update`, 2026 Q2 release, + one parity fix), the same copy the
+# Somtum Patcher's in-game counter uses. The server pays vanilla with ppy's own lazer calculator
+# (ppy.osu.Game.Rulesets.* 2026.730.0); this port is kept in step with it. See vendor/rosu-pp/SOMTUM.md.
+rosu-pp = { path = "vendor/rosu-pp", default-features = false, features = ["sync"] }
+# Relax and Autopilot: akatsuki-pp-rs at the commit the server's pp-sidecar is built from
+# (TomYum sidecars/pp-sidecar/Cargo.lock). osu! Relax = its osu_2019 formula; Autopilot and Relax on
+# taiko/catch/mania = its main calculator. Bump together with the sidecar, never alone.
+akatsuki-pp = { git = "https://github.com/osuAkatsuki/akatsuki-pp-rs", rev = "591de0db4948f2c504ca6e2ca3db442f09103ef1" }
+rosu-mods = "0.2.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+# Every exported function catches panics (lib.rs `guarded`), which needs unwinding.
+panic = "unwind"
+
+[profile.release-wasm]
+inherits = "release"
+opt-level = 3
+panic = "abort"
