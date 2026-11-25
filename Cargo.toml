@@ -3,7 +3,7 @@ name = "somtum-pp"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-description = "osu!somtum pp: the same star rating and pp the somtum server pays, for vanilla, Relax and Autopilot, behind one C ABI (native static/dynamic library and WebAssembly)."
+description = "somtum.fun pp: the same star rating and pp the somtum server pays, for vanilla, Relax and Autopilot, behind one C ABI (native static/dynamic library and WebAssembly)."
 repository = "https://github.com/somtum-fun/somtum-pp"
 
 [lib]

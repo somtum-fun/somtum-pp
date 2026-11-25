@@ -1,4 +1,4 @@
-// Package somtumpp is osu!somtum pp (vanilla, Relax, Autopilot) as the somtum server pays it.
+// Package somtumpp is somtum.fun pp (vanilla, Relax, Autopilot) as the somtum server pays it.
 //
 // It runs the somtum-pp WebAssembly build (embedded) on wazero, so it is pure Go: no cgo, no Rust
 // toolchain, and it cross-compiles to every GOOS/GOARCH as is. Safe for concurrent use (calls are

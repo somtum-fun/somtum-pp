@@ -1,6 +1,6 @@
 //! # somtum-pp
 //!
-//! Star rating and pp as the osu!somtum server pays them, for tools that run beside the game
+//! Star rating and pp as the somtum.fun server pays them, for tools that run beside the game
 //! (overlays, memory readers, replay renderers). One routing for everyone:
 //!
 //! | play                                   | calculator                                   |

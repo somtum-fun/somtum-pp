@@ -1,6 +1,6 @@
 # somtum-pp
 
-Star rating and pp **as the osu!somtum server pays them**, for tools that run beside the game:
+Star rating and pp **as the somtum.fun server pays them**, for tools that run beside the game:
 overlays and memory readers ([tosu](https://github.com/somtum-fun/tosu),
 [gosumemory](https://github.com/somtum-fun/gosumemory)), replay renderers
 ([danser-go](https://github.com/somtum-fun/danser-go)), bots.
